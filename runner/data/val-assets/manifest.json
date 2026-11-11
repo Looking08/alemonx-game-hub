@@ -1,0 +1,265 @@
+{
+  "at": 1793726479153,
+  "agents": {
+    "e370fa57-4757-3604-3648-499e1f642d3f": {
+      "name": "盖可",
+      "role": "先锋",
+      "file": "agent-e370fa57-4757-3604-3648-499e1f642d3f.jpg"
+    },
+    "dade69b4-4f5a-8528-247b-219e5a1facd6": {
+      "name": "黑梦",
+      "role": "先锋",
+      "file": "agent-dade69b4-4f5a-8528-247b-219e5a1facd6.jpg"
+    },
+    "5f8d3a7f-467b-97f3-062c-13acf203c006": {
+      "name": "铁臂",
+      "role": "先锋",
+      "file": "agent-5f8d3a7f-467b-97f3-062c-13acf203c006.jpg"
+    },
+    "cc8b64c8-4b25-4ff9-6e7f-37b4da43d235": {
+      "name": "钢锁",
+      "role": "哨卫",
+      "file": "agent-cc8b64c8-4b25-4ff9-6e7f-37b4da43d235.jpg"
+    },
+    "b444168c-4e35-8076-db47-ef9bf368f384": {
+      "name": "钛狐",
+      "role": "先锋",
+      "file": "agent-b444168c-4e35-8076-db47-ef9bf368f384.jpg"
+    },
+    "f94c3b30-42be-e959-889c-5aa313dba261": {
+      "name": "雷兹",
+      "role": "决斗",
+      "file": "agent-f94c3b30-42be-e959-889c-5aa313dba261.jpg"
+    },
+    "22697a3d-45bf-8dd7-4fec-84a9e28c69d7": {
+      "name": "尚勃勒",
+      "role": "哨卫",
+      "file": "agent-22697a3d-45bf-8dd7-4fec-84a9e28c69d7.jpg"
+    },
+    "601dbbe7-43ce-be57-2a40-4abd24953621": {
+      "name": "K/O",
+      "role": "先锋",
+      "file": "agent-601dbbe7-43ce-be57-2a40-4abd24953621.jpg"
+    },
+    "6f2a04ca-43e0-be17-7f36-b3908627744d": {
+      "name": "斯凯",
+      "role": "先锋",
+      "file": "agent-6f2a04ca-43e0-be17-7f36-b3908627744d.jpg"
+    },
+    "117ed9e3-49f3-6512-3ccf-0cada7e3823b": {
+      "name": "零",
+      "role": "哨卫",
+      "file": "agent-117ed9e3-49f3-6512-3ccf-0cada7e3823b.jpg"
+    },
+    "320b2a48-4d9b-a075-30f1-1f93a9b638fa": {
+      "name": "猎枭",
+      "role": "先锋",
+      "file": "agent-320b2a48-4d9b-a075-30f1-1f93a9b638fa.jpg"
+    },
+    "7c8a4701-4de6-9355-b254-e09bc2a34b72": {
+      "name": "迷核",
+      "role": "控场",
+      "file": "agent-7c8a4701-4de6-9355-b254-e09bc2a34b72.jpg"
+    },
+    "1e58de9c-4950-5125-93e9-a0aee9f98746": {
+      "name": "奇乐",
+      "role": "哨卫",
+      "file": "agent-1e58de9c-4950-5125-93e9-a0aee9f98746.jpg"
+    },
+    "95b78ed7-4637-86d9-7e41-71ba8c293152": {
+      "name": "海神",
+      "role": "控场",
+      "file": "agent-95b78ed7-4637-86d9-7e41-71ba8c293152.jpg"
+    },
+    "efba5359-4016-a1e5-7626-b1ae76895940": {
+      "name": "维斯",
+      "role": "哨卫",
+      "file": "agent-efba5359-4016-a1e5-7626-b1ae76895940.jpg"
+    },
+    "707eab51-4836-f488-046a-cda6bf494859": {
+      "name": "蝰蛇",
+      "role": "控场",
+      "file": "agent-707eab51-4836-f488-046a-cda6bf494859.jpg"
+    },
+    "ddd5a15c-4fbe-42fa-3789-11a55ca5ee04": {
+      "name": "遐思",
+      "role": "决斗",
+      "file": "agent-ddd5a15c-4fbe-42fa-3789-11a55ca5ee04.jpg"
+    },
+    "eb93336a-449b-9c1b-0a54-a891f7921d69": {
+      "name": "不死鸟",
+      "role": "决斗",
+      "file": "agent-eb93336a-449b-9c1b-0a54-a891f7921d69.jpg"
+    },
+    "92eeef5d-43b5-1d4a-8d03-b3927a09034b": {
+      "name": "禁灭",
+      "role": "哨卫",
+      "file": "agent-92eeef5d-43b5-1d4a-8d03-b3927a09034b.jpg"
+    },
+    "41fb69c1-4189-7b37-f117-bcaf1e96f1bf": {
+      "name": "星礈",
+      "role": "控场",
+      "file": "agent-41fb69c1-4189-7b37-f117-bcaf1e96f1bf.jpg"
+    },
+    "9f0d8ba9-4140-b941-57d3-a7ad57c6b417": {
+      "name": "炼狱",
+      "role": "控场",
+      "file": "agent-9f0d8ba9-4140-b941-57d3-a7ad57c6b417.jpg"
+    },
+    "0e38b510-41a8-5780-5e8f-568b2a4f2d6c": {
+      "name": "壹决",
+      "role": "决斗",
+      "file": "agent-0e38b510-41a8-5780-5e8f-568b2a4f2d6c.jpg"
+    },
+    "1dbf2edd-4729-0984-3115-daa5eed44993": {
+      "name": "暮蝶",
+      "role": "控场",
+      "file": "agent-1dbf2edd-4729-0984-3115-daa5eed44993.jpg"
+    },
+    "bb2a4828-46eb-8cd1-e765-15848195d751": {
+      "name": "霓虹",
+      "role": "决斗",
+      "file": "agent-bb2a4828-46eb-8cd1-e765-15848195d751.jpg"
+    },
+    "7f94d92c-4234-0a36-9646-3a87eb8b5c89": {
+      "name": "夜露",
+      "role": "决斗",
+      "file": "agent-7f94d92c-4234-0a36-9646-3a87eb8b5c89.jpg"
+    },
+    "df1cb487-4902-002e-5c17-d28e83e78588": {
+      "name": "幻棱",
+      "role": "决斗",
+      "file": "agent-df1cb487-4902-002e-5c17-d28e83e78588.jpg"
+    },
+    "569fdd95-4d10-43ab-ca70-79becc718b46": {
+      "name": "贤者",
+      "role": "哨卫",
+      "file": "agent-569fdd95-4d10-43ab-ca70-79becc718b46.jpg"
+    },
+    "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc": {
+      "name": "芮娜",
+      "role": "决斗",
+      "file": "agent-a3bfb853-43b2-7238-a4f1-ad90e9e46bcc.jpg"
+    },
+    "8e253930-4c05-31dd-1b6c-968525494517": {
+      "name": "幽影",
+      "role": "控场",
+      "file": "agent-8e253930-4c05-31dd-1b6c-968525494517.jpg"
+    },
+    "add6443a-41bd-e414-f6ad-e58d267f4e95": {
+      "name": "捷风",
+      "role": "决斗",
+      "file": "agent-add6443a-41bd-e414-f6ad-e58d267f4e95.jpg"
+    }
+  },
+  "maps": {
+    "dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd": {
+      "name": "异变轮战",
+      "file": "map-dd3a1cd9-41b1-50ea-3bd6-a7bb3c5978bd.jpg"
+    },
+    "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319": {
+      "name": "亚海悬城",
+      "file": "map-7eaecc1b-4337-bbf6-6ab9-04b8f06b3319.jpg"
+    },
+    "d960549e-485c-e861-8d71-aa9d1aed12a2": {
+      "name": "霓虹町",
+      "file": "map-d960549e-485c-e861-8d71-aa9d1aed12a2.jpg"
+    },
+    "b529448b-4d60-346e-e89e-00a4c527a405": {
+      "name": "裂变峡谷",
+      "file": "map-b529448b-4d60-346e-e89e-00a4c527a405.jpg"
+    },
+    "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba": {
+      "name": "源工重镇",
+      "file": "map-2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba.jpg"
+    },
+    "a9009649-421f-d5d5-f80c-0cbe02c125bb": {
+      "name": "斗牛 1",
+      "file": "map-a9009649-421f-d5d5-f80c-0cbe02c125bb.jpg"
+    },
+    "a264de0f-4a04-9c78-c97a-a6b192ce6e86": {
+      "name": "斗牛 3",
+      "file": "map-a264de0f-4a04-9c78-c97a-a6b192ce6e86.jpg"
+    },
+    "4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed": {
+      "name": "斗牛 5",
+      "file": "map-4490f1d6-4818-bf5f-9b3a-9c9a8dbb52ed.jpg"
+    },
+    "1c7555fc-4bc6-3b98-9674-789d47ef6c50": {
+      "name": "斗牛 4",
+      "file": "map-1c7555fc-4bc6-3b98-9674-789d47ef6c50.jpg"
+    },
+    "690b3ed2-4dff-945b-8223-6da834e30d24": {
+      "name": "商街",
+      "file": "map-690b3ed2-4dff-945b-8223-6da834e30d24.jpg"
+    },
+    "12452a9d-48c3-0b02-e7eb-0381c3520404": {
+      "name": "古城",
+      "file": "map-12452a9d-48c3-0b02-e7eb-0381c3520404.jpg"
+    },
+    "2c09d728-42d5-30d8-43dc-96a05cc7ee9d": {
+      "name": "渔市",
+      "file": "map-2c09d728-42d5-30d8-43dc-96a05cc7ee9d.jpg"
+    },
+    "d6336a5a-428f-c591-98db-c8a291159134": {
+      "name": "乱次元",
+      "file": "map-d6336a5a-428f-c591-98db-c8a291159134.jpg"
+    },
+    "de28aa9b-4cbe-1003-320e-6cb3ec309557": {
+      "name": "小镇",
+      "file": "map-de28aa9b-4cbe-1003-320e-6cb3ec309557.jpg"
+    },
+    "224b0a95-48b9-f703-1bd8-67aca101a61f": {
+      "name": "幽邃地窟",
+      "file": "map-224b0a95-48b9-f703-1bd8-67aca101a61f.jpg"
+    },
+    "2fe4ed3a-450a-948b-6d6b-e89a78e680a9": {
+      "name": "莲华古城",
+      "file": "map-2fe4ed3a-450a-948b-6d6b-e89a78e680a9.jpg"
+    },
+    "92584fbe-486a-b1b2-9faa-39b0f486b498": {
+      "name": "日落之城",
+      "file": "map-92584fbe-486a-b1b2-9faa-39b0f486b498.jpg"
+    },
+    "1f10dab3-4294-3827-fa35-c2aa00213cf3": {
+      "name": "基础训练",
+      "file": "map-1f10dab3-4294-3827-fa35-c2aa00213cf3.jpg"
+    },
+    "fd267378-4d1d-484f-ff52-77821ed10dc2": {
+      "name": "深海明珠",
+      "file": "map-fd267378-4d1d-484f-ff52-77821ed10dc2.jpg"
+    },
+    "756da597-416b-c0f2-f47b-afbdf28670bc": {
+      "name": "天枢云阙",
+      "file": "map-756da597-416b-c0f2-f47b-afbdf28670bc.jpg"
+    },
+    "e2ad5c54-4114-a870-9641-8ea21279579a": {
+      "name": "森寒冬港",
+      "file": "map-e2ad5c54-4114-a870-9641-8ea21279579a.jpg"
+    },
+    "ee613ee9-28b7-4beb-9666-08db13bb2244": {
+      "name": "靶场",
+      "file": "map-ee613ee9-28b7-4beb-9666-08db13bb2244.jpg"
+    },
+    "5914d1e0-40c4-cfdd-6b88-eba06347686c": {
+      "name": "靶场",
+      "file": "map-5914d1e0-40c4-cfdd-6b88-eba06347686c.jpg"
+    },
+    "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047": {
+      "name": "隐世修所",
+      "file": "map-2bee0dc9-4ffe-519b-1cbd-7fbe763a6047.jpg"
+    },
+    "a38a3f9a-4042-844c-8970-a3ac2f7ce93d": {
+      "name": "斗牛 2",
+      "file": "map-a38a3f9a-4042-844c-8970-a3ac2f7ce93d.jpg"
+    },
+    "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53": {
+      "name": "微风岛屿",
+      "file": "map-2fb9a4fd-47b8-4e7d-a969-74b4046ebd53.jpg"
+    },
+    "1c18ab1f-420d-0d8b-71d0-77ad3c439115": {
+      "name": "盐海矿镇",
+      "file": "map-1c18ab1f-420d-0d8b-71d0-77ad3c439115.jpg"
+    }
+  }
+}

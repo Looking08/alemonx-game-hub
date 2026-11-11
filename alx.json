@@ -1,0 +1,27 @@
+{
+  "id": "game-hub",
+  "name": "游戏中心",
+  "version": "0.1.1",
+  "description": "聚合和平精英、无畏契约、王者荣耀的扫码登录与数据查询：微信 / QQ 双通道扫码免抓包，单局详情三游戏通用，多账号本地加密存储，公开数据免登录可查。",
+  "runtime": "node",
+  "entry": {
+    "darwin-amd64": "runner/main.mjs",
+    "darwin-arm64": "runner/main.mjs",
+    "linux-amd64": "runner/main.mjs",
+    "linux-arm64": "runner/main.mjs",
+    "linux-armv7": "runner/main.mjs",
+    "linux-386": "runner/main.mjs",
+    "windows-amd64": "runner/main.mjs",
+    "windows-arm64": "runner/main.mjs",
+    "freebsd-amd64": "runner/main.mjs",
+    "freebsd-arm64": "runner/main.mjs"
+  },
+  "web": {
+    "root": "web"
+  },
+  "navigation": {
+    "label": "游戏中心",
+    "icon": "🎮",
+    "order": 40
+  }
+}

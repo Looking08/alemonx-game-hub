@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@alemonjs/db": "^0.0.21",
+    "jsxp": "^1.4.0"
+  },
+  "description": "template bot",
+  "devDependencies": {
+    "@alemonjs/onebot": "^2.1.23",
+    "alemonjs": "^2.1.109"
+  },
+  "name": "mybot",
+  "packageManager": "yarn@1.22.22",
+  "private": true,
+  "scripts": {
+    "app": "node index.js",
+    "dev": "node index.js",
+    "menu": "node src/game/menu/render.mjs",
+    "review": "npx alemonc start",
+    "start": "node index.js",
+    "warm": "node scripts/warm-cards.mjs"
+  },
+  "type": "module",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ]
+}

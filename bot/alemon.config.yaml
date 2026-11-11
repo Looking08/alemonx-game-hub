@@ -1,0 +1,42 @@
+# https://alemonjs.com/docs/alemonjsDocs/getting-started/config
+
+# 框架消息语言
+language: zh-CN
+
+# 默认启动平台与应用服务器端口
+# 写上这两项后，直接 `node index.js`（工作台「前台运行」走的就是这条）
+# 也会带 onebot 平台并监听 17119，不必再手敲 --platform / --serverPort。
+platform: '@alemonjs/onebot'
+serverPort: 17119
+
+# 全局主人（UserKey：<平台>:<账号>；master_id 直接填你自己的 QQ 号）
+master_id:
+  - '10000'
+
+# ===== OneBot（QQ 协议端，NapCat 通过反向 WS 连进来）=====
+# 注意：17158 已被 Docker 里的 alemonjs-app 占用，这里用 17258 并存
+onebot:
+  url: ws://127.0.0.1:3001
+  token: ''
+  # 反向 WS：由 NapCat 主动连到本机的 17258
+  reverse_enable: true
+  reverse_port: 17258
+  version: 11
+  master_id:
+    - '10000'
+
+# ===== 进程握手超时 =====
+# 平台 / 模块 / 应用是三个 node 进程，靠 IPC 建通讯层。
+# 本机 4 核但负载常在 20~30，默认 15s 不够，会刷 code:4000 无限重启。
+process:
+  restart_delay: 3000
+  control_ready_timeout: 60000
+  transport_ready_timeout: 90000
+  app_ready_timeout: 120000
+  max_restart_delay: 30000
+
+# 之前试装过一个云崽插件（packages/yunzai-plugin-quote-card），它依赖云崽运行时，
+# 在 alemonjs 下必然加载失败、每次启动刷 code:5000 报错，这里先关掉。
+# apps:
+#   yunzai-plugin-quote-card: true
+apps: {}

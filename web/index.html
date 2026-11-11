@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>游戏中心</title>
+    <script>
+      // 宿主会带 ?theme=dark|light，先落到 <html data-theme> 避免首屏闪白
+      ;(function () {
+        var theme = new URLSearchParams(location.search).get('theme')
+        if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme
+      })()
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">🎮</span>
+        <div>
+          <h1>游戏中心</h1>
+          <p id="subtitle">正在读取插件状态…</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button id="refresh" class="btn ghost" type="button">刷新状态</button>
+      </div>
+    </header>
+
+    <nav class="tabs" id="tabs" role="tablist"></nav>
+
+    <main id="panels"></main>
+
+    <div class="modal" id="qr-modal" hidden>
+      <div class="modal-card">
+        <header>
+          <h2 id="qr-title">微信扫码登录</h2>
+          <button class="btn ghost icon" id="qr-close" type="button" aria-label="关闭">✕</button>
+        </header>
+        <div class="qr-wrap">
+          <img id="qr-image" alt="登录二维码" />
+          <div class="qr-state" id="qr-state">等待扫码…</div>
+        </div>
+        <p class="hint">用微信扫一扫，确认后会自动保存登录态到工作区。</p>
+      </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

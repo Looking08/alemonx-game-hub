@@ -1,0 +1,17 @@
+# 依赖与产物
+node_modules/
+dist/
+packages/
+
+# 运行期生成：出图缓存与素材缓存（首次查询时自动重建）
+bot/src/game/render/cache/
+bot/src/game/render/assets/
+bot/logs/
+bot/preview/
+
+# AlemonJS 运行期状态
+bot/.alemon/
+
+# 系统杂物
+.DS_Store
+*.log
