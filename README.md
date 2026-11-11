@@ -37,8 +37,7 @@
 
 ## 参考插件
 
-本项目把三款游戏的**数据适配与扫码登录**收敛成一套统一接口，站在三个 TRSS-Yunzai 生态插件的肩膀上，
-按各自许可证在 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) 逐文件列明来源与改动：
+本项目把三款游戏的**数据适配与扫码登录**收敛成一套统一接口，按各自许可证在 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) 逐文件列明来源与改动：
 
 | 参考项目 | 作者 | 许可证 | 本项目怎么用 |
 | --- | --- | --- | --- |
