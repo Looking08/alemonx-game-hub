@@ -360,41 +360,25 @@ curl "https://open.alemonjs.com/api/v2/resources?type=x-plugin&pageSize=100"
 审核要点通常看：清单合法、资产命名与 tag 规范、没有把凭证上传到第三方、
 README 里写清数据来源与许可证。
 
-## 群聊 / 机器人用户能用吗
+## 系统插件与机器人插件的差别（为什么仓库里有两个入口）
 
-**不能。** 这是系统插件与机器人插件的运行时差异，不是配置问题：
+本插件本体是 ALemonX 的**系统插件**（面板点击 / HTTP 动作触发，面向本机使用者）；
+群友发消息走的是 **alemonjs 机器人**（消息事件 + 指令路由）。两者是不同的运行时，
+所以仓库额外带了 `bot/` —— 一个标准 AlemonJS 工程，把本插件的适配器桥接成 QQ 群指令：
 
-| | 本插件（系统插件） | 群友要用得是「机器人插件」 |
-| --- | --- | --- |
-| 触发 | 面板点击、HTTP 动作 | QQ 消息事件 + 指令 |
-| 入口 | `alx.json` + `runner/main.mjs` | `defineChildren` + `Router` |
-| 宿主 | alx 工作台 | alemonjs |
-| 面向 | 本机使用者 | 群成员 |
-
-接了 NapCat / QQBot 之后，消息进的是 alemonjs 机器人（`alemon.config.yaml` 的 `apps:`），
-它不认识本插件的任何动作，群友发 `#王者英雄` 只会当普通聊天。
-
-### 如果要接，怎么接
-
-`runner/games/*.mjs` 是纯 ESM、零依赖模块，机器人插件可以直接 `import` 复用，不必复制代码：
-
-```js
-// 机器人插件里
-const kog = await import('<path>/game-hub/runner/games/kog.mjs')
-const result = await kog.heroes()   // 返回 { count: 133, items: [...] }
+```text
+QQ 群消息 → NapCat（OneBot v11 反向 WS）→ bot/（alemonjs 路由）
+    → src/game/hub.mjs 动态 import runner/games/*.mjs
+    → 出卡片图回群
 ```
 
-需要额外处理三件事：
+`bot/` 做了三件系统插件没有的事：
 
-1. **多用户凭证**：现在 `accounts.json` 是 `{ kog: {...} }`，一个游戏一个账号（单人场景）。
-   群内多人使用要改成按 QQ 号隔离（`{ kog: { "<qq>": {...} } }`），登录与查询都带用户身份；
-2. **扫码只能在私聊**：群友扫不到你工作台的二维码，应由私聊回复二维码图片，
-   确认后凭证落到该 QQ 名下；群里只开放免登录的公开数据；
-3. **登录态共享**：容器里跑机器人时，把 `<workspace>/store/game-hub` 挂进容器并设
-   `ALX_PLUGIN_STORE`，否则工作台与机器人各存一份。
+1. **多用户凭证隔离**：凭证按 `qq:<QQ号>` 分开存，同一个群里各登各的互不串号；
+2. **扫码进群**：登录二维码直接发回原会话（群聊或私聊都行），扫完主动推送结果；
+3. **卡片出图**：所有指令回复都是渲染好的图片，版式见上文「机器人出图」。
 
-> 不建议让机器人回连宿主 HTTP 接口：alx 默认只绑 `127.0.0.1`，容器够不着；
-> 改成 `0.0.0.0` 就必须开 `alx auth` 管令牌，多一层暴露不如直接 import。
+两个入口共用 `ALX_PLUGIN_STORE` 指向的同一份账号库，面板里登录过的号群里直接能查。
 
 ## 已知限制
 
