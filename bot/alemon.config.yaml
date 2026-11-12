@@ -40,3 +40,11 @@ process:
 # apps:
 #   yunzai-plugin-quote-card: true
 apps: {}
+
+# ===== game-hub 的 Expose 能力（插件间共享调用，类似 MCP）=====
+# 默认开启；查询身份绑定「当前消息的主人」，扫码登录仍走聊天指令。
+# game-hub:
+#   expose:
+#     enabled: true
+#     # 限制哪些插件（callerApp）可以调用；留空 / 缺省 = 不限
+#     allowed_callers: []

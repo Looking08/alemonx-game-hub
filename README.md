@@ -148,6 +148,43 @@ sh run.sh               # 应用服务器 17119，OneBot 反向 WS 监听 17258
   所以指令不会卡住 100 秒；
 - `解绑 王者` 只删自己名下的凭证。
 
+## Expose：把查询能力共享给其他插件（类 MCP）
+
+`bot/` 注册了 [alemonjs 的 Expose 能力](https://github.com/lemonade-lab/alemonjs)（协议名 `game-hub`），
+同一运行实例里的其他插件 / AI 可以像调 MCP 工具一样调用三款游戏的查询，
+聊天指令出图与 Expose 调用复用同一份「拉数据 + 组装模型」代码（`src/game/cards.mjs`）。
+
+**消费示例**（在另一个插件里）：
+
+```ts
+import { Expose } from 'alemonjs'
+
+const client = Expose.create()
+const result = await client.call('game-hub', 'mybot', 'kog_battle_detail', { index: 1 }, { timeoutMs: 15000 })
+if (result.ok) {
+  // result.data: { status: 'success' | 'error', text: string, data: string }
+  // text 是给人看的摘要；data 是卡片模型的 JSON 字符串（结构随动作不同），自行 JSON.parse
+}
+```
+
+**动作清单**（22 个）：
+
+| 类别 | 动作 | 输入 | 登录 |
+| --- | --- | --- | --- |
+| 通用 | `get_help`、`get_status`（结构化：每游戏登录态） | — | — |
+| 王者 | `kog_heroes`、`kog_hero_skins`、`kog_hero_power`、`kog_profile`、`kog_matches`、`kog_battle_detail` | `keyword?` / `hero` / `index` | 后三个需登录 |
+| 和平 | `pubg_profile`、`pubg_recent_matches`、`pubg_battle_detail`、`pubg_weapons`、`pubg_honor`、`pubg_weekly` | `index?` | 需登录 |
+| 无畏 | `val_agents`、`val_maps`、`val_panel`、`val_match_detail`、`val_peers`、`val_weapons`、`val_agents_perf` | `keyword?` / `sort?` / `index` | `val_panel` 等需登录 |
+| 账号 | `unbind`（write） | `game` 枚举 | — |
+
+**安全模型**（参考 [alemonjs-roco](https://github.com/Entropy-Increase-Team/alemonjs-roco)）：
+
+- 查询身份绑定「当前消息的主人」：调用必须发生在某条消息的处理链路里（`callerApp` + 消息事件），
+  谁触发就查谁的账号，不能代查他人；
+- 业务失败（未登录、登录态失效）返回 `{ status: 'error', text }`，不抛异常；
+- 扫码登录是交互流程（发码进群 + 轮询），保留在聊天指令侧，不进 Expose；
+- 配置开关写在 `alemon.config.yaml`：`game-hub.expose.enabled`（默认 true）、
+  `game-hub.expose.allowed_callers`（插件名白名单，留空不限）。
 
 ## 扫码链路
 

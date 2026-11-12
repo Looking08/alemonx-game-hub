@@ -6,7 +6,7 @@
   "description": "template bot",
   "devDependencies": {
     "@alemonjs/onebot": "^2.1.23",
-    "alemonjs": "^2.1.109"
+    "alemonjs": "^2.1.118"
   },
   "name": "mybot",
   "packageManager": "yarn@1.22.22",

@@ -1,4 +1,5 @@
 import { Router, defineChildren } from 'alemonjs'
+import { gameHubExpose } from './expose/index.mjs'
 
 // 只监听这两类事件，群聊 / 私聊
 const router = Router.create({
@@ -108,7 +109,10 @@ setTimeout(() => {
 export default defineChildren({
   register() {
     return {
-      responseRouter: router.define
+      responseRouter: router.define,
+      // Expose：把三款游戏的查询能力注册成结构化动作，
+      // 同一运行实例里的其他插件 / AI 可像调 MCP 工具一样调用（协议名 game-hub）。
+      expose: gameHubExpose
     }
   }
 })
