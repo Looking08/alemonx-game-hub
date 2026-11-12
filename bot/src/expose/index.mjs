@@ -164,7 +164,7 @@ const val_agents_perf = query('查询特工熟练度统计（需登录）', empt
 
 const unbind = query(
   '删除当前消息用户在指定游戏的登录凭证（只删本人）',
-  obj({ game: { type: 'string', enum: ['kog', 'pubg', 'val'] }, description: '要解绑的游戏' }, ['game']),
+  obj({ game: { type: 'string', enum: ['kog', 'pubg', 'val'], description: '要解绑的游戏' } }, ['game']),
   (input, userKey) => unbindCard(userKey, input.game),
   'write'
 )
